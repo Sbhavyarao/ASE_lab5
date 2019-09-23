@@ -1,0 +1,27 @@
+.background {
+  --background-image: url('../../assets/bg.jpg');
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+ion-content{
+  --background:url('../../assets/bg.jpg') 0 0/100% 100% no-repeat;
+}
+ion-card-content{
+  box-shadow: none;
+  background: white;
+  border-radius: 10px;
+  text-decoration-color: black!important;
+}
+ion-card{
+  box-shadow: none;
+  background: white;
+  border-radius: 10px;
+}
+
+/*ion-img {
+  object-fit:fill;
+  width: auto !important;
+  height: 300px;
+  border: 0;
+  padding: 0;
+}*/

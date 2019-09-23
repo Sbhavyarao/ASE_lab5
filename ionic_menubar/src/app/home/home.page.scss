@@ -1,0 +1,100 @@
+.welcome-card img {
+  max-height: 35vh;
+  overflow: hidden;
+}
+
+
+.background {
+  --background-image: url('../../assets/bg.jpg');
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+/*ion-content{
+  --background: #fff url('../../assets/bg.jpg') no-repeat center center / cover;
+}*/
+
+ion-content{
+  --background:url('../../assets/bg.jpg') 0 0/100% 100% no-repeat;
+}
+
+/*ion-card-content{
+  box-shadow: none;
+  background: white;
+  border-radius: 5px;
+}*/
+
+.scroll-content {
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center !important;
+}
+
+ion-card.card {
+  box-shadow: none;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+}
+
+h2
+ion-card-header.card-header {
+  color: red!important;
+}
+
+.list > .item-block:first-child {
+  border: medium none!important;
+}
+
+.item {
+  margin-bottom: 10px;
+  background: white;
+  border: medium none;
+
+
+  .text-input{
+    color: #fff !important;
+  }
+
+  input::-moz-placeholder  {
+    color: #fff!important;
+  }
+
+  input:-moz-placeholder {
+    color: #fff!important;
+  }
+
+  *::-webkit-input-placeholder  {
+    color: #fff!important;
+  }
+
+  *:-ms-input-placeholder  {
+    color: #fff!important;
+  }
+
+  *:-moz-placeholder  {
+    color: #fff!important;
+  }
+}
+
+.icon {
+  padding-right: 10px;
+}
+
+.bottom {
+  position: absolute;
+  bottom: 0;
+}
+.username input{
+  max-height: 10px !important;
+  height: 12px !important;
+}
+
+.custom-icon {
+  font-size: 40px;
+  color : green;
+}
+.custom-icon-sad {
+  font-size: 40px;
+  color : red;
+}

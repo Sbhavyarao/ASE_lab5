@@ -1,0 +1,7 @@
+{
+  "name": "ionic_menubar",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

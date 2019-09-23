@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar >
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Emotion Detection
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="background">
+  <br>
+  <ion-searchbar animated placeholder="Type your text here"[(ngModel)]="searchItem"></ion-searchbar>
+  <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <ion-button *ngIf="searchItem" size=" small"shape="round" color="light" (click)="checkEmotion()">Check Emotion</ion-button>
+  <br>
+  <ion-card *ngIf="emotionResult && searchItem">
+    <ion-card-content>
+      <form>
+        <ion-item *ngIf="emotionResult=='Positive'">
+          <ion-icon name="happy" class="custom-icon"></ion-icon> &nbsp;&nbsp;
+          <ion-input>{{emotionResult}}</ion-input> &nbsp;
+          <ion-progress-bar [value]="progress" color="success" style="width: 200px;height: 15px"></ion-progress-bar>
+
+        </ion-item>
+        <ion-item *ngIf="emotionResult=='Negative'">
+          <ion-icon name="sad" class="custom-icon-sad"></ion-icon> &nbsp;&nbsp;
+          <ion-input>{{emotionResult}}</ion-input>&nbsp;
+          <ion-progress-bar [value]="progress" color="danger" style="width: 200px;height: 15px"></ion-progress-bar>
+        </ion-item>
+      </form>
+    </ion-card-content>
+
+  </ion-card>
+</ion-content>
+

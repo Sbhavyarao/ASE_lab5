@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar >
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      The Movie Club
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <br>
+  <ion-searchbar animated placeholder="Enter Movie Name"[(ngModel)]="searchedMovie"></ion-searchbar>
+  <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <ion-button *ngIf="searchedMovie" size=" small"shape="round" color="light" (click)="getMovieData()">Search</ion-button>
+  <ion-card *ngIf="showHistory">
+    <ion-card-title style="text-align: center">History </ion-card-title>
+    <ion-button size="small" color="primary" *ngFor="let item of movieList" (click)="getHistoryMovieData(item.Value)">&nbsp;{{item.Value}}<br></ion-button>
+  </ion-card>
+  <ion-card *ngFor="let item of movieData">
+    <ion-card-title>{{item.title}}</ion-card-title>
+    <ion-card-subtitle>&nbsp;&nbsp; Release Date: {{item.release_date}}</ion-card-subtitle>
+    <br>
+    <ion-img style="width: 100px ;height: 100px;" [src]="'https://image.tmdb.org/t/p/w200/'+item.poster_path"></ion-img>
+    <ion-card-content>
+      {{item.overview}}
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
